@@ -43,7 +43,7 @@ const Login = () => {
               <br>
               </br>
               <p>
-                New? <a href="/signup">Sign up here!</a>
+                Don't have an account? <a href="/signup">Sign up here!</a>
               </p>
         
       </div>
