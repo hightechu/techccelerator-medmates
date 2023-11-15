@@ -32,6 +32,7 @@ function App() {
          Safe use rooms for you
         </p>
         <Login />
+        
         <React />
     </div>
   );
