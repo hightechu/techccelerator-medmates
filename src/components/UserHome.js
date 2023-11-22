@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from 'firebase_setup/firebase';
 import { useNavigate } from 'react-router-dom';
- 
+import {Icon} from 'leaflet';
+import redpin from '../images/redpin.png'; 
+
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
 const UserHome = () => {
 
     // Use this code (lines 9-18) on other pages that you only want authenticated users to see
@@ -26,22 +30,51 @@ const UserHome = () => {
         });
     }
  
+//Define custom icons for different categories
+const RJH = new Icon ({
+    iconUrl : redpin,
+    iconSize : [50, 50], // size of the icon
+    iconAnchor : [25, 25], // point of the icon which will correspond to marker's location
+    popupAnchor : [-3, -76] // point from which the popup should open relative to the iconAnchor
+
+  })
+
+//Define custom icons for different categories
+const VJH = new Icon ({
+    iconUrl : redpin,
+    iconSize : [50, 50], // size of the icon
+    iconAnchor : [25, 25], // point of the icon which will correspond to marker's location
+    popupAnchor : [-3, -76] // point from which the popup should open relative to the iconAnchor
+
+    })
+
+
     return (
         <div className="container-fluid">        
             <h1>Welcome back, {currentUser.email}</h1>
             <p>
-                This is your user homepage. This is a good place to put their main feed.
+                Red pings: Hospitals, Blue pings: Safe-use Rooms
             </p>
-            <p><abbr title="Google maps"></abbr></p>
             <button onClick={handleLogout}>Logout</button>
-            <div class="embed-responsive embed-responsive-21by9">
-            <iframe class="embed-responsive-item" title='maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24472.948889600277!2d-123.38690614802564!3d48.422387305994974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f7485365d4cc9%3A0x1ed8d37dd7f1b902!2sDowntown%2C%20Victoria%2C%20BC!5e0!3m2!1sen!2sca!4v1699408848324!5m2!1sen!2sca" 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" title='locations' allowfullscreen></iframe>
-</div>
+             <div id="map">
+        <MapContainer center={[48.4284, -123.3656]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[48.4320473, -123.3295302]} icon={RJH}>
+            <Popup>
+              Royal Jubilee Hospital.<br /> A safe space to go for help
+            </Popup>
+          </Marker>
+          <Marker position={[48.4657321, -123.4292546]} icon={VJH}>
+            <Popup>
+              Victoria General Hospital. <br /> An open hospital
+            </Popup>
+          </Marker>
+        </MapContainer>
         </div>
+</div>
     )
 }
 

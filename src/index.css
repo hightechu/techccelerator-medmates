@@ -26,3 +26,7 @@ code {
 .custom-class {
   color: rgb(255, 0, 0);
 }
+
+*#map, .leaflet-container {
+  height: 400px;
+}
