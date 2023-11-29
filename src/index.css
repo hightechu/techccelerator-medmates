@@ -30,3 +30,6 @@ code {
 *#map, .leaflet-container {
   height: 400px;
 }
+h2 {line-height: 0.6}
+h2 {font-size: 50px;}
+hr {line-height: px;}

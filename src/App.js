@@ -2,6 +2,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from 'firebase_setup/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import pillbottle from './images/pillbottle.png';
 
 
 // Import any components that you want to use, like the login form
@@ -27,13 +28,23 @@ function App() {
   // We can choose to write vanilla HTML as normal, or use some of our React components. Here, I used Login
   return (
     <div className="container-fluid">
-        <h1>Welcome to MedMates</h1>
+        <h2>
+        MED
+      </h2>
+      <hr>
+          
+          </hr>
+      <h2>
+        MATES
+      </h2>
         <p>
-         Safe use rooms for you
+       <br />  Safe use rooms for you
         </p>
         <Login />
+
+        <img src={pillbottle}></img>
         
-        <React />
+      
     </div>
   );
 }
