@@ -21,7 +21,7 @@ const Login = () => {
     <>
       <div>
        
-              <h3>Login</h3>
+              
               {error ? <div>{error}</div> : null}
               <form onSubmit={handleSubmit}>
                 <input
@@ -38,12 +38,12 @@ const Login = () => {
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
                 /><br></br>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Login" />
               </form>
               <br>
               </br>
               <p>
-                New? <a href="/signup">Sign up here!</a>
+                Don't have an account? <a href="/signup">Sign up here!</a>
               </p>
         
       </div>

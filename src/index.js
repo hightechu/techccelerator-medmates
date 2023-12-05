@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import 'leaflet/dist/leaflet.css';
+import 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
 import './index.css';
 
 // Components imports for routing
@@ -40,4 +42,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-
