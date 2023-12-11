@@ -1,16 +1,19 @@
-# HighTechU Techccelerator React App
+# MedMates
 
 ## About
 
 <!-- You will want to modify the text below to include a short description of your app -->
 <!-- You will want to modify the documentation link to your app's help page -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Posuere lorem ipsum dolor sit. Quis varius quam quisque id diam vel quam elementum pulvinar. Rhoncus dolor purus non enim praesent elementum facilisis leo. Accumsan lacus vel facilisis volutpat est velit egestas dui. For more information about the app visit the "[documentation](https://hightechu.ca)".
+MedMates connects users struggling with substance use and mental health with safe use rooms, hospitals, and counselling services. [Click here to learn more!](https://docs.google.com/presentation/d/1wp13YTnGGdOu0dxuiHRl6ByQdWnHSvCaLhagAQ4Gk3U/edit#slide=id.g4dfce81f19_0_45)
 
+![MedMates pitch](docs/medmates.png)
+
+MedMates is the winner of the Fall 2023 Social Impact award.
 
 ## Technologies
 
-The HighTechU Techccelerator web app uses the following technologies: Node.js, React.js, Firebase, and Bootstrap.
+The MedMates web app uses the following technologies: Node.js, React.js, Firebase, Leaflet, and Bootstrap.
 
 ## Getting Started
 
@@ -24,17 +27,14 @@ See [`CONTRIBUTING`](.github/CONTRIBUTING.md) for ways to get started.
 
 Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
-## Useful Resources
-
-* [React Documentation](https://react.dev/reference/react)
-* [Firebase Documentation](https://firebase.google.com/docs?gad=1&gclid=Cj0KCQjwzdOlBhCNARIsAPMwjbzPQ-Agmh5XfsQcmfi5jzcgb5lp9x1lHb9xjZqGsFUmLq4MXlq2CqYaAnlIEALw_wcB&gclsrc=aw.ds)
-
 ## License
 
 The project uses the [MIT LICENSE](https://choosealicense.com/licenses/mit/).
 
-## Authors Ethan, and Ben
+## Authors
 
 <!-- You will want modify the authors list below to include all contributing team members. -->
 
+- Ethan Tompkins
+- Ben Cameron
 - [@hightechu](https://github.com/hightechu)
